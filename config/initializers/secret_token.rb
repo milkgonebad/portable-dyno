@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-PortableDyno::Application.config.secret_token = '971ee6eaf9138a06a61948d6eed756eb8ea931aa10b184ecc4f48624b1fd7530d5abbd659e6ea87e8a30ec288272066ea4329219096b603bddca0548a464d4ee'
+PortableDyno::Application.config.secret_token = '4a27898373ade510b0042a25de045982039cffb24e45658e92bc98b713bb52759d1da3e41865bc6d6b3b550278cf720638bfc393e30946c002178849f496b960'
