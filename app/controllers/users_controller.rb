@@ -41,8 +41,7 @@ class UsersController < ApplicationController
       user.destroy
       redirect_to users_path
     else
-      flash[:error] = 'You cannot delete yourself.  That would be bad.'
-      redirect_to :action => :index
+      redirect_to users_path, :notice => 'You cannot delete yourself.  That would be bad.'
     end
   end
   

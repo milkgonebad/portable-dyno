@@ -2,8 +2,9 @@
 
 <%= link_to 'Logout', destroy_user_session_path, :method => :delete %><br>
 <%= link_to 'Edit My Info', edit_user_registration_path %><br>
-<%= link_to "User Administration", users_path %><br>
-
-TODO:  link to events<br>
+<% if current_user.admin? %>
+    <%= link_to "User Administration", users_path %><br>
+<% end %>
+<%= link_to "Events", events_path %><br>
 TODO:  link to image galleries<br>
 TODO:  link to customers<br>

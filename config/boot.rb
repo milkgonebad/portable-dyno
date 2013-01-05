@@ -4,3 +4,7 @@ require 'rubygems'
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+
+#FIXME:  This is a hack because in Rails 3 yml files do not get loaded correctly
+require 'yaml'
+YAML::ENGINE.yamler = 'syck'
