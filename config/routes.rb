@@ -1,12 +1,4 @@
 PortableDyno::Application.routes.draw do
-  
-  get "users/index"
-
-  get "users/update"
-
-  get "users/delete"
-
-  get "users/show"
 
   root :to => 'home#index'
   devise_for :users

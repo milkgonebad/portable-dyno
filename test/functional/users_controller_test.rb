@@ -15,10 +15,9 @@ class UsersControllerTest < ActionController::TestCase
     get :delete
     assert_response :success
   end
-
-  test "should get show" do
-    get :show
-    assert_response :success
+  
+  test "should not be able to delete myself" do
+    #TODO - should not be able to delete myself if I'm the current_user
   end
 
 end
