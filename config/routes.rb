@@ -1,5 +1,17 @@
 PortableDyno::Application.routes.draw do
 
+  get "events/index"
+
+  get "events/new"
+
+  get "events/create"
+
+  get "events/edit"
+
+  get "events/update"
+
+  get "events/destroy"
+
   root :to => 'home#index'
   devise_for :users, :skip => [:registrations]
     as :user do # only use the registration routes we need
