@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+admin = User.create(email: 'admin@portable-dyno.com', password: 'changeme', password_confirmation: 'changeme')
+admin.toggle!(:admin)
+admin.save!
