@@ -75,3 +75,5 @@ And the huge TODO list
 - trigger users to change their password upon first log in
 - build out galleries and images - upload using PaperClip, CarrierWave/MiniMagick
 - add controller tests
+- move all static text to locale file en.yml
+- port the contact us form from PHP to Rails
