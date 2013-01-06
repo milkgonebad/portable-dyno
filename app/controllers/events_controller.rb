@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_filter :authenticate_user!
-  
+
   def index
     @events = Event.order('event_start_date, event_start_date_time').all
   end
@@ -18,7 +18,7 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to events_path, :notice => 'Event was successfully created.'
     else
-      render :action => :new 
+      render :new 
     end
   end
   
@@ -31,7 +31,7 @@ class EventsController < ApplicationController
     if @event.update_attributes(params[:event])
       redirect_to events_path, :notice => 'Event was successfully updated.'
     else
-      render :action => :edit 
+      render :edit 
     end
   end
   
@@ -44,5 +44,5 @@ class EventsController < ApplicationController
   #TODO add a preview event feature before publishing
   def preview
   end
-  
+
 end
