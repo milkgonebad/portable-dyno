@@ -1,6 +1,6 @@
 <div class="row footer small">
-    &copy;2011 Portable-Dyno<br>
-    207-370-5440<br>
-    <a href="/event.html">Contact</a> : <a href="/dyno.html">About</a> : <a href="/faq.html">FAQ</a> : <a href="/pictures/index.html">Gallery</a>
+    &copy;2011-<%= DateTime.now.year %> Portable-Dyno<br>
+    <%= PHONE %><br>
+    <%= link_to 'Contact', contact_path %> : <%= link_to 'About', about_path %> : <%= link_to 'FAQ', faq_path %> : <%= link_to 'Gallery', gallery_path %>
 </div>
 <div class="row"></div>

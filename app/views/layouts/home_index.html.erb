@@ -13,13 +13,9 @@
     <meta content='Portable Dynamometer' name='title'>
 </head>
 <body>
-    <div class="content_well shadow">
-        <%= render 'header' %>
-        <div class="row full_width">
-            <%= yield %>
-            <%= render 'footer' %>
-        </div>
-    </div>
-    <%= javascript_include_tag "google_analytics" %>
+
+<%= yield %>
+
+<%= javascript_include_tag "google_analytics" %>
 </body>
 </html>
