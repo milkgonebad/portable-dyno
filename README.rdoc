@@ -77,3 +77,5 @@ And the huge TODO list
 - add controller tests
 - move all static text to locale file en.yml
 - port the contact us form from PHP to Rails
+- beautify the list of events on the home page - add styles and better formatting
+- add a modal to click on the event for more info/description

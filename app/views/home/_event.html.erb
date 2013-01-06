@@ -1,0 +1,15 @@
+<div class="event">
+    <em><%= event.name %></em><br/>
+    Start Date:  <%= l(event.event_start_date, :format => :long) %> - <%= l(event.event_start_date_time, :format => :pretty) %><br/>
+    <% unless event.event_end_date.blank? %>
+        End Date:  <%= l(event.event_end_date, :format => :long) %> - <%= l(event.event_end_date_time, :format => :pretty) %><br/>
+    <% end %>
+    Location:  <%= event.location %> <br/>
+    Address:  <%= event.address1 %>, 
+    <% unless event.address2.blank? %> <%= event.address2 %>,<% end %> 
+    <%= event.city %>, 
+    <% unless event.state.blank? %><%= event.state %>,<% end %>
+    <%= event.country %><br/>
+    <br/>
+</div>
+

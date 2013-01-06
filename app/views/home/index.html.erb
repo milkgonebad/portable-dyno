@@ -34,28 +34,17 @@
                 <h3><a href="event.html">Schedule An Event!</a></h3>
                 <p>You host the event, we'll bring the dyno!</p>
             </div>
+            <div class="events_list">
+                <% unless @events.empty? %>
+                    <h2>Upcoming Events</h2>
+                    <%= render :partial => 'home/event', :collection => @events %>
+                <% end %>
+            </div>
+            <br>
+            <br>
             <iframe width="425" height="349" src="http://www.youtube.com/embed/BG49o_sLZWQ?hl=en&fs=1" frameborder="0" allowfullscreen></iframe>
             <br>
-            <br>
-            <!-- BEGIN Tawidget -->
-            <script src="http://tawidget.com/js/tawidget.js"></script>
-            <script>Taweet.showWidget("PortableDyno", {
-                    title: "Events",
-                    width: "500px",
-                    height: "150px",
-                    events: "5",
-                    scroll: true,
-                    colors: {
-                        widgetbg: "#49494d",
-                        widgettext: "#ffffff",
-                        eventbg: "#e0e0dc",
-                        eventtext: "#333333",
-                        eventdate: "#333333",
-                        linkcolor: "#2351ad"
-                    }
-                });
-            </script>
-            <!-- END Tawidget -->     
+            <br>       
         </div>
         <div class="box b5column">
             <%= render 'contact_us' %>
