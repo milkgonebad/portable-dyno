@@ -1,5 +1,5 @@
 <%= form_for(@user) do |f| %>
-  <%= display_error_messages %>
+  <%= display_error_messages(@user) %>
   <div>
     <%= f.label :email %><br />
     <%= f.email_field :email, :autofocus => true %>

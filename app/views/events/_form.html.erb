@@ -1,0 +1,64 @@
+<%= form_for(@event) do |f| %>
+  <%= display_error_messages(@event) %>
+  <div>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name, :autofocus => true %>
+  </div>
+  <div class="when">
+    <div>
+      <%= f.label :event_start_date %><br/>
+      <%= f.text_field :event_start_date, :type => 'date' %>
+    </div>
+    <div>
+      <%= f.label :event_start_date_time %><br/>
+      <input id="event_event_start_date_time" name="event[event_start_date_time]" type="time" value="<%= get_time(@event.event_start_date_time) %>">
+    </div>
+    <div>
+      <%= f.label :event_end_date %><br/>
+      <%= f.text_field :event_end_date, :type => 'date' %>
+    </div>
+    <div>
+      <%= f.label :event_end_date_time %><br/>
+      <input id="event_event_end_date_time" name="event[event_end_date_time]" type="time" value="<%= get_time(@event.event_end_date_time) %>">
+    </div>
+  </div>
+  <div class="description">
+    <%= f.label :description %><br/>
+    <%= f.text_area :description %>
+  </div>
+  <div class="location">
+    <div>
+      <%= f.label :location %><br/>
+      <%= f.text_field :location %>
+    </div>
+    <div>
+      <%= f.label :address1 %><br/>
+      <%= f.text_field :address1 %>
+    </div>
+    <div>
+      <%= f.label :address2 %><br/>
+      <%= f.text_field :address2 %>
+    </div>
+    <div>
+      <%= f.label :city %><br/>
+      <%= f.text_field :city %>
+    </div>
+    <div>
+      <%= f.label :state %> (US Only)<br/>
+      <%= f.select :state, options_for_select([["Select a State", ""]] + US_STATES, @event.state) %>
+    </div>
+    <div>
+      <%= f.label :zipcode %><br/>
+      <%= f.text_field :zipcode, :size => 10 %>
+    </div>
+    <div>
+      <%= f.label :country %><br/>
+      <%= f.country_select :country, ['United States'] %>    
+    </div>
+  </div>
+  <div>
+    <%= f.label :publish %><br/>
+    <%= f.check_box :publish %>
+  </div>
+  <div><%= f.submit "Submit" %></div>
+<% end %>
