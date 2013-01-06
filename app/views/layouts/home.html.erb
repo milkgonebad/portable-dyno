@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portable Dynamometer</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <link rel="icon" type="image/gif" href="<%= asset_path('favicon.gif') %>">
+    <link rel="apple-touch-icon" href="<%= asset_path('touch_icon.jpg')%>
+    <meta NAME="Description" CONTENT="Portable Dyno, Mobile Chassis Dyno, Dyno Rental, Mobile Dyno, Dyno Days: serving Maine, New Hampshire, Connecticut, Rhode Island, Massachusetts, and Vermont">
+    <meta http-equiv="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <meta content='dyno, dynamometer, Portable Chassis Dyno, horsepower, portable, cars, automotive' name='keywords'>
+    <meta content='Portable Dynamometer' name='title'>
+</head>
+<body>
+
+<%= yield %>
+
+<%= javascript_include_tag "google_analytics" %>
+</body>
+</html>

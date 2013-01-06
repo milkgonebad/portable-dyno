@@ -1,2 +1,77 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="content_well shadow">
+    <div class="row">
+        <div class="box b7column social_icons">
+            <a href="http://www.facebook.com/pages/Portable-Dyno/174327369283538">
+                <%= image_tag 'social_facebook.jpg', :alt => 'Portable-Dyno on Facebook' %>
+            </a>
+            <a href="http://twitter.com/portabledyno">
+                <%= image_tag 'social_twitter.jpg', :alt => 'Portable-Dyno on Twitter' %>
+            </a>
+        </div>
+        <div class="box b5column">
+            <div class="big number">Call us at 207-370-5440</div>
+        </div>
+    </div>
+    <div class="marquee row">
+        <h1>Portable Dyno</h1>
+        <p>The most advanced portable dynamometer in the New England area.</p>
+    </div>
+    <div class="row full_width">
+        <div class="box b7column">
+            <div class="link_box">
+                <h3><a href="dyno.html">About Our Dynamometer</a></h3>
+                <p></p>
+            </div>
+            <div class="link_box">
+                <h3><a href="faq.html">FAQ</a></h3>
+                <p>Some answers to common questions.</p>
+            </div>
+            <div class="link_box">
+                <h3><a href="pictures/index.html">Gallery</a></h3>
+                <p></p>
+            </div>
+            <div class="link_box">
+                <h3><a href="event.html">Schedule An Event!</a></h3>
+                <p>You host the event, we'll bring the dyno!</p>
+            </div>
+            <iframe width="425" height="349" src="http://www.youtube.com/embed/BG49o_sLZWQ?hl=en&fs=1" frameborder="0" allowfullscreen></iframe>
+            <br>
+            <br>
+            <!-- BEGIN Tawidget -->
+            <script src="http://tawidget.com/js/tawidget.js"></script>
+            <script>Taweet.showWidget("PortableDyno", {
+                    title: "Events",
+                    width: "500px",
+                    height: "150px",
+                    events: "5",
+                    scroll: true,
+                    colors: {
+                        widgetbg: "#49494d",
+                        widgettext: "#ffffff",
+                        eventbg: "#e0e0dc",
+                        eventtext: "#333333",
+                        eventdate: "#333333",
+                        linkcolor: "#2351ad"
+                    }
+                });
+            </script>
+            <!-- END Tawidget -->     
+        </div>
+        <div class="box b5column">
+            <div class="inset">
+                <h2>What can we do for you?</h2>
+                <form action="mailer.php" method="post" class="contact">
+                <label>Name: </label><input type="text" name="nam" class="name_input">
+                <label>Company: </label><input type="text" name="dukan" class="company_input">
+                <label>Phone: </label><input type="text" name="fon" class="phone_input">
+                <label>Email: </label><input type="text" name="dak" class="email_input">
+                <span class="hidden"><label>Please leave this line blank: </label><input type="text" name="name"></span>
+                <label>Message: </label><textarea name="message" rows="12" cols="30" class="message_input"></textarea>
+                <input type="submit" name="submit" value="Submit"  class="submit_input">
+                <div class="row"></div>
+                </form>
+            </div>
+            </div>
+            <%= render 'footer' %>
+        </div>
+    </div>
