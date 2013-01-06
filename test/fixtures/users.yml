@@ -16,6 +16,6 @@ joe:
   email:  joe@joe.com
   admin:  false
   
-heather:
+heather_admin:
   email:  heather@heather.com
   admin:  true
