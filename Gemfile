@@ -18,4 +18,4 @@ gem 'debugger'
 gem 'json'
 gem 'devise'
 gem 'country-select'
-# gem 'exception_notification'
+

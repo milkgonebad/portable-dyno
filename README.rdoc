@@ -2,64 +2,77 @@
 
 This is a simple Rails 3.x application developed on Ruby 1.9.3.
 
-This application is a port of the static site www.portable-dyno.com to Rails.
+This application is a port of the static HTML site www.portable-dyno.com to Rails.
 The current live site can be found at http://www.portable-dyno.com or find the code under /public/old_site.
 
-The original requirement was to add a event scheduler to the portable-dyno.com home page.
+Why port this site?
+
+The original site used to use a component called Tawidget.com which doesn't seem to exist anymore.  This
+was a nifty way for the admin to post events, schedule the twitter spam, and display the events on the home page.
+No word on what happened to Tawidget.com.  They were probably purchased by Facebook like everyone else.
+
+So the original requirement was to add a event scheduler to the portable-dyno.com home page.
 This should allow for scheduling twitter updates for the particular event and offer details
 about the event including a link to a google map for the location.
 
+Basically doing what Tawidget was doing.
+
+BUT!
+
 In order to get to this point, we needed a user authentication system so users can log in and add events.
-Devise was chosen as it seemed to be the Rails community's favorite at the time of writing this.
+And how about making an admin interface that works on my iPhone?
+Oh and a better image gallery management system?
+Hey lets try HTML5 while we're at it!
+
+And it goes on from there...
 
 While this application is under construction, and isn't hosted anywhere yet (probably Heroku), this should 
 offer a brief look the author's coding skills and habits.  
 
 Current technologies used:  Rails 3.2.x, Ruby 1.9.3, MySql, HTML5, jQuery, Devise, TestUnit
-Future technologies:  Rspec/Capybara/Spork/Selenium/Factory Girl, AJAX, jQuery UI
+Future technologies:  Rspec/Capybara/Spork/Selenium/Factory Girl, AJAX, jQuery UI, and probably more
 
-Please check out this app from time to time as it matures.
+Please feel free to watch as this app comes together and hopefully drums up more business for www.portable-dyno.com.
+(That reminds me.  We should get some metrics for before the port and after...)
 
-= Here is a list of high level requirements
+= Here is a list of the high level requirements
 
 - Port the home page, about page, contact us, faq
 - Calendar of events on home page for future events only
 - Gallery of images tied to events - should be google searchable
 - Events should have ability to add scheduled twitter alerts
 - Events should link to a google map location
-- Contact us email form
+- Contact us email form - no longer PHP
+- Preview events before publishing feature
 - Admin login to do the following:
--- Create/read/update/delete events
--- Upload, organize, tag, images, create folders - validate image size, format, etc
--- User administration
+** Create/read/update/delete events
+** Upload, organize, tag, images, create folders - validate image size, format, etc
+** User administration
 
 = Future Features
-- Tag employees or Facebook users
-- Display a list of featured customers with their logos - Red Bull Racing etc.
-- Add roles to types of admin users with the CanCan gem
-- Ensure the site admin features work with the iPhone
+- Tag employees or Facebook users in images/galleries
+- Display a list of featured customers with their logos - Red Bull Racing, Infinity, etc.
+- Add roles to types of admin users (with the CanCan gem)
+- Make the backend iPhone friendly
 
 = TODO
 And the huge TODO list
 
 - setup exception_notification gem
-- update ReadMe doc
-- write test for deleting a user and not deleting yourself - controller test for both users and devise registrations
-- add datepicker to event creation screen
+- write test for deleting a user and not deleting yourself - controller test for both users and devise registrations controllers
 - add a preview event feature before publishing
 - break location out into it’s own model - location can have many events
 - break customer into it’s own model - customer can have many events
 - add better time picker with http://jdewit.github.com/bootstrap-timepicker/
-- Make the event ajax friendly and add ui validations - smarten up the HTML 5 date/time - our admin doesn’t use IE
+- Make the event ajax friendly and add ui validations - smarten up the HTML 5 date/time - our admin doesn’t use IE so we're safe
 - Only display end date if needed on event form
+- Add UI form validation via jQuery
 - add json return format to event controller - might be useful when integrating with twitter etc.
-- add timezone to dates?  Maybe not since the events are always in local time
 - add global nav links to admin pages
 - consider moving all admin items (events, devise) under /admin
 - convert the js and css to coffeescript and sass
 - make the faq be dynamic
 - add user unit tests - need to review devise documentation on a how-to
 - trigger users to change their password upon first log in
-- override devise to not allow a user to delete themself 
 - build out galleries and images - upload using PaperClip, CarrierWave/MiniMagick
 - add controller tests
