@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-#    @events = Event.future_published_events
+    @events = Event.future_published_events
     render :layout => 'home_index'
   end
   

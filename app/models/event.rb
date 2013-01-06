@@ -1,9 +1,12 @@
 class Event < ActiveRecord::Base
   
+  scope :future_published_events, lambda { where('publish = 1 AND event_start_date >= ?', self.get_today_at_midnight) }
+  
   attr_accessible :name, :description, :event_start_date, :event_start_date_time, :event_end_date, 
     :event_end_date_time, :location, :address1, :address2, :city, :country, :state, :zipcode, :publish
   
   validates :name, :event_start_date, :location, :presence => true 
+  
   
   # Valiation notes:
   # trust that date and times are in the correct format
@@ -17,4 +20,9 @@ class Event < ActiveRecord::Base
   #  if end time is given, start time must be provided and must be before end date
   # start date should be today or in the future - will we ever backfill?  maybe?
   
+  def self.get_today_at_midnight
+    current = DateTime.now
+    midnight = Date.new(current.year, current.month, current.day)
+  end
+   
 end

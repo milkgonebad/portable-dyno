@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+an_event:
   name: MyString
   location: MyString
   event_start_date: 2013-01-04
@@ -16,18 +16,82 @@ one:
   description: MyString
   publish: false
 
-two:
-  name: MyString
-  location: MyString
-  event_start_date: 2013-01-04
-  event_end_date: 2013-01-04
-  event_start_date_time: 2013-01-04 23:19:25
-  event_end_date_time: 2013-01-04 23:19:25
-  address1: MyString
-  address2: MyString
-  city: MyString
-  state: MyString
-  zipcode: MyString
-  country: MyString
-  description: MyString
+another_event_published:
+  name: MyString2
+  location: MyString2
+  event_start_date: 2013-01-03
+  event_end_date: 2013-01-03
+  event_start_date_time: 2013-01-03 23:19:25
+  event_end_date_time: 2013-01-03 23:19:25
+  address1: MyString2
+  address2: MyString2
+  city: MyString2
+  state: MyString2
+  zipcode: MyString2
+  country: MyString2
+  description: MyString2
+  publish: true
+
+far_future_published:
+  name: FarFuturePublished
+  location: MyString2
+  event_start_date: 2200-01-03
+  event_end_date: 2200-01-04
+  event_start_date_time: 2200-01-03 23:19:25
+  event_end_date_time: 2200-01-04 03:19:25
+  address1: MyString2
+  address2: MyString2
+  city: MyString2
+  state: MyString2
+  zipcode: MyString2
+  country: MyString2
+  description: MyString2
+  publish: true
+
+far_future_not_published:
+  name: FarFutureNotPublished
+  location: MyString2
+  event_start_date: 2201-01-03
+  event_end_date: 2201-01-04
+  event_start_date_time: 2201-01-03 23:19:25
+  event_end_date_time: 2201-01-04 03:19:25
+  address1: MyString2
+  address2: MyString2
+  city: MyString2
+  state: MyString2
+  zipcode: MyString2
+  country: MyString2
+  description: MyString2
   publish: false
+
+far_past_not_published:
+  name: FarPastNotPublished
+  location: MyString2
+  event_start_date: 1901-01-03
+  event_end_date: 1901-01-04
+  event_start_date_time: 1901-01-03 23:19:25
+  event_end_date_time: 1901-01-04 03:19:25
+  address1: MyString2
+  address2: MyString2
+  city: MyString2
+  state: MyString2
+  zipcode: MyString2
+  country: MyString2
+  description: MyString2
+  publish: false
+
+far_past_published:
+  name: FarPastPublished
+  location: MyString2
+  event_start_date: 1902-01-03
+  event_end_date: 1902-01-04
+  event_start_date_time: 1902-01-03 23:19:25
+  event_end_date_time: 1902-01-04 03:19:25
+  address1: MyString2
+  address2: MyString2
+  city: MyString2
+  state: MyString2
+  zipcode: MyString2
+  country: MyString2
+  description: MyString2
+  publish: true
