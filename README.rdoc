@@ -44,10 +44,9 @@ Please feel free to watch as this app comes together and hopefully drums up more
 - Events should link to a google map location
 - Contact us email form - no longer PHP
 - Preview events before publishing feature
-- Admin login to do the following:
-** Create/read/update/delete events
-** Upload, organize, tag, images, create folders - validate image size, format, etc
-** User administration
+- Create/read/update/delete events
+- Upload, organize, tag, images, create folders - validate image size, format, etc
+- User administration
 
 = Future Features
 - Tag employees or Facebook users in images/galleries
