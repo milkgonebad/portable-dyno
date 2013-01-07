@@ -7,9 +7,9 @@ The current live site can be found at http://www.portable-dyno.com or find the c
 
 Why port this site?
 
-The original site used to use a component called Tawidget.com which doesn't seem to exist anymore.  This
+The original site utilized a component called Tawidget.com which doesn't seem to exist anymore.  This
 was a nifty way for the admin to post events, schedule the twitter spam, and display the events on the home page.
-No word on what happened to Tawidget.com.  They were probably purchased by Facebook like everyone else.
+No word on what happened to Tawidget.com.  They were probably purchased by Facebook...
 
 So the original requirement was to add a event scheduler to the portable-dyno.com home page.
 This should allow for scheduling twitter updates for the particular event and offer details
@@ -20,7 +20,7 @@ Basically doing what Tawidget was doing.
 BUT!
 
 In order to get to this point, we needed a user authentication system so users can log in and add events.
-And how about making an admin interface that works on my iPhone?
+And how about making an admin interface that works on an iPhone?
 Oh and a better image gallery management system?
 Hey lets try HTML5 while we're at it!
 
@@ -38,7 +38,7 @@ Please feel free to watch as this app comes together and hopefully drums up more
 = Here is a list of the high level requirements
 
 - Port the home page, about page, contact us, faq
-- Calendar of events on home page for future events only
+- Calendar of events on home page for future events
 - Gallery of images tied to events - should be google searchable
 - Events should have ability to add scheduled twitter alerts
 - Events should link to a google map location
@@ -63,9 +63,9 @@ And the huge TODO list
 - break location out into it’s own model - location can have many events
 - break customer into it’s own model - customer can have many events
 - add better time picker with http://jdewit.github.com/bootstrap-timepicker/
-- Make the event ajax friendly and add ui validations - smarten up the HTML 5 date/time - our admin doesn’t use IE so we're safe
+- Make the event ajax friendly and add ui validations 
+- Smarten up the HTML 5 date/time fields
 - Only display end date if needed on event form
-- Add UI form validation via jQuery
 - add json return format to event controller - might be useful when integrating with twitter etc.
 - add global nav links to admin pages
 - consider moving all admin items (events, devise) under /admin
@@ -74,8 +74,9 @@ And the huge TODO list
 - add user unit tests - need to review devise documentation on a how-to
 - trigger users to change their password upon first log in
 - build out galleries and images - upload using PaperClip, CarrierWave/MiniMagick
-- add controller tests
+- add controller tests with Capybara
 - move all static text to locale file en.yml
 - port the contact us form from PHP to Rails
 - beautify the list of events on the home page - add styles and better formatting
 - add a modal to click on the event for more info/description
+- add a pretty layout to the backend
