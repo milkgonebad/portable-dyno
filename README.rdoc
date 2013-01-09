@@ -57,6 +57,7 @@ Please feel free to watch as this app comes together and hopefully drums up more
 = TODO
 And the huge TODO list
 
+- build out the tweet model, add to UI, create rake task for a cronjob to use
 - setup exception_notification gem
 - write test for deleting a user and not deleting yourself - controller test for both users and devise registrations controllers
 - add a preview event feature before publishing

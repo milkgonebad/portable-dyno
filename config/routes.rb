@@ -1,5 +1,8 @@
 PortableDyno::Application.routes.draw do
 
+  resources :tweets
+
+
   # public routes
   root :to => 'home#index'
   get '/contact' => 'home#contact'

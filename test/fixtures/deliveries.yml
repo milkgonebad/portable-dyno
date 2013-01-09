@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  send_at: 2013-01-08 21:12:50
+  sent: false
+
+two:
+  send_at: 2013-01-08 21:12:50
+  sent: false

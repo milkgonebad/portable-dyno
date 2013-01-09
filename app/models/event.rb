@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
   
+  has_many :tweets, :dependent => :destroy
+  
   scope :future_published_events, lambda { where('publish = 1 AND event_start_date >= ?', self.get_today_at_midnight) }
   
   attr_accessible :name, :description, :event_start_date, :event_start_date_time, :event_end_date, 
